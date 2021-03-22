@@ -1,0 +1,15 @@
+### Send a form with the text and file fields
+POST http://192.168.80.128:8080/demo/upload
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="element-name"
+Content-Type: text/plain
+
+Name
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="gg.png"
+Content-Type: image/png
+
+< gg.png
+--WebAppBoundary--
